@@ -26,9 +26,9 @@ inquirer
 });
   })
   .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
+  if (error.isTtyError) {
+    console.log("Terminal does not support input prompts");
+  } else {
+    console.log("Error occurred:", error);
+  }
   });
